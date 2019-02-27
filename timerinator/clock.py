@@ -38,3 +38,10 @@ class Clock:
     def debug_info(self):
         for attr, value in self.__dict__.items():
             print(attr, value)
+
+    def make_hms(self):
+
+        if self.current_time > -1:
+            return str(dt.timedelta(seconds=self.current_time))
+        else:
+            return "-" + str(dt.timedelta(seconds=self.current_time * -1))
