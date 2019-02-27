@@ -30,6 +30,11 @@ def test_change_clock_total_time():
     c.total_time = 99
     assert c.total_time == 99
 
+def test_change_clock_current_time():
+    c = clock.Clock()
+    c.current_time = 99
+    assert c.current_time == 99
+
 def test_change_clock_remaining_time():
     c = clock.Clock()
     c.remaining_time = 99
