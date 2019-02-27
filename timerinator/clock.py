@@ -32,5 +32,9 @@ class Clock:
 
     def tick_clock(self):
         now = dt.datetime.now()
-        self.current_time = int((now - self.start_time).total_seconds())
+        self.current_time = self.total_time - int((now - self.start_time).total_seconds())
         self.update_remaining_time()
+
+    def debug_info(self):
+        for attr, value in self.__dict__.items():
+            print(attr, value)
